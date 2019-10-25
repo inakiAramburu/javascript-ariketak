@@ -1,0 +1,45 @@
+<html>
+
+<head>
+	<title> Galeria 2.0 </title>
+	<script type="text/javascript">
+		function ikusi(irudia) {
+			document.getElementById("handia").src= "irudiak/"+irudia;
+
+		}
+	</script>
+
+	<style type="text/css">
+		table {margin: 0 auto;
+			text-align: center;}
+		
+		img {width: 200px;
+			height: 100px;}
+		#handia {height: 400px;
+			width: 800px;}
+	</style>
+</head>
+
+<body>
+	<div>
+		<table border="1px">
+			<tr>
+				<td colspan="4"><img src="irudiak/00.jpg" id="handia" ></td>
+			</tr>
+			<tr>
+				<td><img src="irudiak/00.jpg" onclick="ikusi('00.jpg')"></td>
+				<td><img src="irudiak/01.jpg" onclick="ikusi('01.jpg')"></td>
+				<td><img src="irudiak/02.jpg" onclick="ikusi('02.jpg')"></td>
+				<td><img src="irudiak/10.jpg" onclick="ikusi('10.jpg')"></td>
+			</tr>
+			<tr>
+				<td><img src="irudiak/11.jpg" onmouseover="ikusi('11.jpg')"></td>
+				<td><img src="irudiak/12.jpg" onmouseover="ikusi('12.jpg')"></td>
+				<td><img src="irudiak/20.jpg" onmouseover="ikusi('20.jpg')"></td>
+				<td><img src="irudiak/21.jpg" onmouseover="ikusi('21.jpg')"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+
+</html>

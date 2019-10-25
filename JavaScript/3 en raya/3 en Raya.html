@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> 3 en Raya </title>
+	<script type="text/javascript">
+		var jok1= 0; 
+		var jok2= 0;
+		var txanda= 1;
+		var taula= new Array(); //Posizio hori libre dago. Balorea 1 denean okupatuta egongo da.
+		for (var i=0; i<=8; i++) {
+			taula[i]=0;
+		}
+		function berria(){
+				for (i=0; i<=8; i++) {
+					taula[i]=0;
+					document.getElementById('a'+ i).src="irudiak/fondo.png";
+					}
+			}	
+		function exekutatu(posizioa) {
+			if (txanda==1) {
+				if (taula[posizioa]==0) {
+					document.getElementById('a' + posizioa).src= "irudiak/x.png";
+					txanda= 2;
+					taula[posizioa]= 1;
+				}
+				else {
+					alert('Posizio hau beteta dago, beste bat aukeratu:');
+				}
+			}
+			else {
+				if (txanda==2) {
+					if (taula[posizioa]==0) {
+						document.getElementById('a' + posizioa).src= "irudiak/o.png";
+						txanda= 1;
+						taula[posizioa]= 2;
+					}
+					else {
+						alert('Posizio hau beteta dago, beste bat aukeratu:');
+					}	
+				}	
+			}
+			if (taula[0]==1 && taula[1]==1 && taula[2]==1) {
+				alert('Zorionaak!! 1.go jokalaria irabazi du!!');
+				jok1+= 1;
+			}
+			else if (taula[3]==1 && taula[4]==1 && taula[5]==1)  {
+				alert('Zorionaak!! 1.go jokalaria irabazi du!!');
+				jok1+= 1;
+			}
+			else if (taula[6]==1 && taula[7]==1 && taula[8]==1)  {
+				alert('Zorionaak!! 1.go jokalaria irabazi du!!');
+				jok1+= 1;
+			}
+			else if (taula[0]==1 && taula[3]==1 && taula[6]==1)  {
+				alert('Zorionaak!! 1.go jokalaria irabazi du!!');
+				jok1+= 1;
+			}
+			else if (taula[1]==1 && taula[4]==1 && taula[7]==1)  {
+				alert('Zorionaak!! 1.go jokalaria irabazi du!!');
+				jok1+= 1;
+			}
+			else if (taula[2]==1 && taula[5]==1 && taula[8]==1)  {
+				alert('Zorionaak!! 1.go jokalaria irabazi du!!');
+				jok1+= 1;
+			}
+			else if (taula[0]==1 && taula[4]==1 && taula[8]==1)  {
+				alert('Zorionaak!! 1.go jokalaria irabazi du!!');
+				jok1+= 1;
+			}
+			else if (taula[2]==1 && taula[4]==1 && taula[6]==1)  {
+				alert('Zorionaak!! 1.go jokalaria irabazi du!!');
+				jok1+= 1;
+			}
+			//Horain bigarren irabazlea definituko dugu
+			//jok2
+			if (taula[0]==2 && taula[1]==2 && taula[2]==2) {
+				alert('Zorionaak!! 2.go jokalaria irabazi du!!');
+				jok2+= 1;
+			}
+			else if (taula[3]==2 && taula[4]==2 && taula[5]==2)  {
+				alert('Zorionaak!! 2.go jokalaria irabazi du!!');
+				jok2+= 1;
+			}
+			else if (taula[6]==2 && taula[7]==2 && taula[8]==2)  {
+				alert('Zorionaak!! 2.go jokalaria irabazi du!!');
+				jok2+= 1;
+			}
+			else if (taula[0]==2 && taula[3]==2 && taula[6]==2)  {
+				alert('Zorionaak!! 2.go jokalaria irabazi du!!');
+				jok2+= 1;
+			}
+			else if (taula[1]==2 && taula[4]==2 && taula[7]==2)  {
+				alert('Zorionaak!! 2.go jokalaria irabazi du!!');
+				jok2+= 1;
+			}
+			else if (taula[2]==2 && taula[5]==2 && taula[8]==2)  {
+				alert('Zorionaak!! 2.go jokalaria irabazi du!!');
+				jok2+= 1;
+			}
+			else if (taula[0]==2 && taula[4]==2 && taula[8]==2)  {
+				alert('Zorionaak!! 2.go jokalaria irabazi du!!');
+				jok2+= 1;
+			}
+			else if (taula[2]==2 && taula[4]==2 && taula[6]==2)  {
+				alert('Zorionaak!! 2.go jokalaria irabazi du!!');
+				jok2+= 1;
+			}
+			document.getElementById('x').innerHTML= jok1; 
+			document.getElementById('o').innerHTML= jok2;		
+		}
+		
+	</script>
+
+	<style type="text/css">
+	body {text-align: center;}
+	#taula {
+		margin: 0 auto;
+		margin-bottom: 50px;}
+		#topleft {border-bottom: 3px solid black;
+			border-right: 3px solid black;}
+		#topmid{border-bottom: 3px solid black;
+			border-left: 3px solid black;
+			border-right: 3px solid black;}
+		#topright{border-bottom: 3px solid black;
+			border-left: 3px solid black;}
+
+		#midleft {border-top: 3px solid black;
+			border-right: 3px solid black;
+			border-bottom: 3px solid black;}
+		#mid {border: 3px solid black;}
+		#midright {border-top: 3px solid black;
+			border-left: 3px solid black;
+			border-bottom: 3px solid black;}
+
+		#botleft {border-top: 3px solid black;
+			border-right: 3px solid black;}
+		#botmid {border-top: 3px solid black;
+			border-left: 3px solid black;
+			border-right: 3px solid black;}
+		#botright {border-top: 3px solid black;
+			border-left: 3px solid black;}
+		#irudix, #berria, #irudio {display: inline;}
+		#x, #o {display: inline;
+			margin-right: 75px;
+			margin-left: 75px;}
+		#lehena, #bigarren {display: inline;
+			margin-right: 40px;
+			margin-left: 50px;}
+	</style>
+</head>
+<body id="guztia">
+	<h1> Tres en Raya </h1>
+	<table id="taula">
+		<tr>
+			<td id="topleft"><img src="irudiak/fondo.png" id="a0" class="irudi" onclick="exekutatu('0')"></td>
+			<td id="topmid"><img src="irudiak/fondo.png" id="a1" onclick="exekutatu('1')"></td>
+			<td id="topright"><img src="irudiak/fondo.png" id="a2" onclick="exekutatu('2')"></td>
+		</tr>
+		<tr>
+			<td id="midleft"><img src="irudiak/fondo.png" id="a3" onclick="exekutatu('3')"></td>
+			<td id="mid"><img src="irudiak/fondo.png" id="a4" onclick="exekutatu('4')"></td>
+			<td id="midright"><img src="irudiak/fondo.png" id="a5" onclick="exekutatu('5')"></td>
+		</tr>
+		<tr>
+			<td id="botleft"><img src="irudiak/fondo.png" id="a6" onclick="exekutatu('6')"></td>
+			<td id="botmid"><img src="irudiak/fondo.png" id="a7" onclick="exekutatu('7')"></td>
+			<td id="botright"><img src="irudiak/fondo.png" id="a8" onclick="exekutatu('8')"></td>
+		</tr>
+	</table>
+	<div id="lehena"> Jokalaria 1 </div>
+	<div id="bigarren"> Jokalaria 2 </div><br/>
+	<div id="irudix"><img src="irudiak/x.png"></div>
+	<div id="berria"><img src="irudiak/berria.png" id="reseteatu" onclick="berria()"></div>
+	<div id="irudio"><img src="irudiak/o.png"></div><br/>
+	<div id="x"> 0 </div>
+	<div id="o"> 0 </div>
+</body>
+</html>

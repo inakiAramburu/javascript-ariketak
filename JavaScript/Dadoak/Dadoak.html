@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Dadoak </title>
+	<script type="text/javascript">
+		var irudia1;
+		var irudia2;
+		var txanda=1;
+		var amaitu=0;
+		var jokalari1
+		function bota(jok1) {
+			while (amaitu<=2) {
+				if (jok==1 && txanda==1) {
+					irudia1=Math.floor(Math.random()* 6)+1;
+					document.getElementById('tirada1').src="irudiak/"+irudia1+".png";
+					var jokalari1= document.getElementById('jok1').innerHTML= jokalari1+irudia1;
+					txanda+=1;
+				}	
+				else if (jok==2 && txanda==2) {
+					irudia2=Math.floor(Math.random()* 6)+1;
+					document.getElementById('tirada2').src="irudiak/"+irudia2+".png";
+					txanda-=1;
+					amaitu+=1;
+				}
+			}
+		}
+	</script>
+
+	<style type="text/css">
+		body {text-align: center;
+			background-image: url(irudiak/back.jpg);}
+		#taula {margin: 0 auto;}
+		#tirada1, #tirada2 {width: 250px;
+			height: 200px;}
+	</style>
+</head>
+<body>
+	<img src="irudiak/dado.jpg" id="tirada1">
+	<img src="irudiak/dado.jpg" id="tirada2"><br/><br/>
+	<input type="button" name="botoia 1" value="Jokalari 1" id="dadoa1" onclick="bota('jok1')">
+	<input type="button" name="botoia 2" value="Jokalari 2" id="dadoa2" onclick="bota('jok2')"><br/><br/>
+	<div id="jok1"> 0 </div>
+	<div id="jok2"> 0 </div>
+	<input type="button" name="botoia 3" value="Hasieratu" id="hasieratu" onclick="reset()">
+</body>
+</html>

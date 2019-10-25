@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Kalkulagailua 1 </title>
+	<script type="text/javascript">
+		function eragiketa(eragik) {
+		var x=parseInt(document.getElementById("sartu1").value);
+		var y=parseInt(document.getElementById("sartu2").value);
+		document.getElementById("emaitza").value= eval(x+eragik+y);}
+	</script>
+</head>
+<body>
+	<div>
+		<form id="kalku">
+			<table border="1 px">
+				<tr>
+				<td><input type="text" name="sartu1" id="sartu1"></td>
+				<td><input type="text" name="sartu2" id="sartu2"></td>
+				<td><input type="text" name="emaitza" id="emaitza"></td>
+				</tr>
+				<tr>
+				<td><input type="button" name="+" value="+" onclick="eragiketa('+')">
+				<input type="button" name="-" value="-" onclick="eragiketa('-')">
+				<input type="button" name="x" value="x" onclick="eragiketa('*')">
+				<input type="button" name="/" value="/" onclick="eragiketa('/')">
+				<input type="button" name="C" value="C" onclick="reset()"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

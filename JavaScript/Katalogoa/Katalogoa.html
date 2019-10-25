@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Katalogoa </title>
+	<script type="text/javascript">
+		
+	</script>
+	<style type="text/css">
+		body {text-align: center;}
+		#taula {margin: 0 auto;
+			text-align: center;
+			border: 1px solid black;}
+		#goikoa {width: 450px;
+			height: 400px;}
+		.behekoak {width: 200px;
+			height: 150px;}
+	</style>
+</head>
+<body>
+	<h1> Produktuen Katalogoa </h1><br/>
+	<select name="lista">
+		<option id="o" onclick="kargatu('ordenagailuak')"> Ordelangailuak </option>
+		<option id="t" onclick="kargatu('tabletak')"> Tabletak </option>
+		<option id="b" onclick="kargatu('bideojokoak')"> Bideojokoak </option>		
+	</select>
+	<table id="taula">
+		<tr>
+			<td><div><img src="irudiak/c00.jpg" id="goikoa" ></div></td>
+		</tr>
+		<tr>
+			<td><div><img src="irudiak/c00.jpg" class="behekoak"></div></td>
+			<td><div><img src="irudiak/c01.jpg" class="behekoak"></div></td>
+			<td><div><img src="irudiak/c02.jpg" class="behekoak"></div></td>
+			<td><div><img src="irudiak/c10.jpg" class="behekoak"></div></td>
+		</tr>
+		<tr>
+			<td><div><img src="irudiak/c11.jpg" class="behekoak"></div></td>
+			<td><div><img src="irudiak/c12.jpg" class="behekoak"></div></td>
+			<td><div><img src="irudiak/c21.jpg" class="behekoak"></div></td>
+			<td><div><img src="irudiak/c22.jpg" class="behekoak"></div></td>
+		</tr>
+	</table>
+</body>
+</html>

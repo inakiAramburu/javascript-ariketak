@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ariketa 8</title>
+	<script type="text/javascript">
+		document.write('1', '<br>');
+		document.write('2', '<br>');
+		document.write('3', '<br>');
+		for (var i=4; i<=100; i++) {
+			lehena=true;
+			for (var j=2; j<i; j++) {
+				if (i%j==0){
+					lehena=false;
+					j=i;}}
+			if (lehena==true) {
+				document.write(i);
+				document.write('<br>');}}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

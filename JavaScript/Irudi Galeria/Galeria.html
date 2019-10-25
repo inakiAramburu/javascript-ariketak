@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> Galeria </title>
+	<script type="text/javascript">
+		function irudia1() {
+			document.getElementById("irudia").src= 'irudiak/coliseo.jpg';}
+		function irudia2() {
+			document.getElementById("irudia").src= 'irudiak/empire.jpg';}
+		function irudia3() {
+			document.getElementById("irudia").src= 'irudiak/taj.jpg';}
+		function irudia4() {
+			document.getElementById("irudia").src= 'irudiak/muralla.jpg';}
+		function irudia5() {
+			document.getElementById("irudia").src= 'irudiak/abu.jpg';}
+		function irudia6() {
+			document.getElementById("irudia").src= 'irudiak/cristo.jpg';}
+		function irudia7() {
+			document.getElementById("irudia").src= 'irudiak/piramide.jpg';}
+		function irudia8() {
+			document.getElementById("irudia").src= 'irudiak/versa.jpg';}
+	</script>
+
+	<style type="text/css">
+		table {margin: 0 auto;
+			text-align: center;}
+		
+		img {width: 200px;
+			height: 100px;}
+		#irudia {height: 400px;
+			width: 800px;}
+	</style>
+</head>
+
+<body>
+	<div>
+		<table border="1px">
+			<tr>
+				<td colspan="4"><img src="irudiak/coliseo2.jpg" id="irudia"></td>
+			</tr>
+			<tr>
+				<td><img src="irudiak/coliseo.jpg" onclick="irudia1()"></td>
+				<td><img src="irudiak/empire.jpg" onclick="irudia2()"></td>
+				<td><img src="irudiak/taj.jpg" onclick="irudia3()"></td>
+				<td><img src="irudiak/muralla.jpg" onclick="irudia4()"></td>
+			</tr>
+			<tr>
+				<td><img src="irudiak/abu.jpg" onmouseover="irudia5()"></td>
+				<td><img src="irudiak/cristo.jpg" onmouseover="irudia6()"></td>
+				<td><img src="irudiak/piramide.jpg" onmouseover="irudia7()"></td>
+				<td><img src="irudiak/versa.jpg" onmouseover="irudia8()"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> infor </title>
+	<script type="text/javascript">
+		var irudia1;
+		var irudia2;
+		var txanda=0;
+		var aldiz1=0;
+		var aldiz2=0;
+		function bota1() {
+			if (aldiz1!=6) {
+			if (txanda==0) {
+				irudia1=Math.floor(Math.random()* 6)+1;
+				document.getElementById('tirada1').src="irudiak/"+irudia1+".png";
+				var jokalari1= document.getElementById('jok1').innerHTML= irudia1;
+				txanda+=1;
+			}
+			}			
+		}
+		function bota2() {
+			if (aldiz2!=6) {
+			if (txanda==1) {
+			irudia2=Math.floor(Math.random()* 6)+1;
+			document.getElementById('tirada2').src="irudiak/"+irudia2+".png";
+			var jokalari2= document.getElementById('jok2').innerHTML= irudia2;
+			txanda-=1;	
+			}
+			}			
+		}
+	</script>
+
+	<style type="text/css">
+		body {text-align: center;
+			background-image: url(irudiak/back.jpg);}
+		#taula {margin: 0 auto;}
+		#tirada1, #tirada2 {width: 250px;
+			height: 200px;}
+	</style>
+</head>
+<body>
+	<img src="irudiak/dado.jpg" id="tirada1">
+	<img src="irudiak/dado.jpg" id="tirada2"><br/><br/>
+	<input type="button" name="botoia 1" value="Jokalari 1" id="dadoa1" onclick="bota1('')">
+	<input type="button" name="botoia 2" value="Jokalari 2" id="dadoa2" onclick="bota2('')"><br/><br/>
+	<div id="jok1"> 0 </div>
+	<div id="jok2"> 0 </div>
+	<input type="button" name="botoia 3" value="Hasieratu" id="hasieratu" onclick="reset()">
+</body>
+</html>

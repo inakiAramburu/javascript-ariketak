@@ -1,0 +1,60 @@
+<!DOCTYPE>
+<html>
+<head>
+<script>
+    var min=0, max=100, promposamena=50, saiakerak=0
+    function kalkulatu(eragiketa) {
+        switch (eragiketa) {
+            case "txikiagoa": 
+                max=promposamena;
+                promposamena=Math.floor((min+max)/2);
+                document.getElementById("proposatu").innerHTML=promposamena;
+                saiakerak+=1;
+                document.getElementById("saiakerak").innerHTML="saiakerak: "+ saiakerak;
+                break;
+                                        
+            case "haundiagoa": 
+                min=promposamena;   
+                promposamena=Math.floor((min+max)/2);
+                document.getElementById("proposatu").innerHTML=promposamena;
+                saiakerak+=1;
+                document.getElementById("saiakerak").innerHTML="saiakerak: "+ saiakerak;
+                break;
+
+            case "asmatu":
+                document.getElementById("saiakerak").innerHTML="ASMATU DUT "+ saiakerak + " SAIAKEREKIN!";
+                break;   
+        }
+    }
+    function berradierazi() {
+            min=0; 
+            max=100;
+            promposamena=50;
+            saiakerak=0;
+            document.getElementById("proposatu").innerHTML=promposamena;
+            document.getElementById("saiakerak").innerHTML="saiakerak: "+saiakerak;              
+    }
+</script>
+
+<style>
+    body {text-align: center;}
+</style>
+
+</head>    
+<body>
+    <div>
+        <h1> Zembaki asmatzailea </h1>
+        <h2> Pentsatu 0 eta 100 artean dagoen zenbaki bat </h2>
+        <h2 id="proposatu">50 </h2>
+        <h1> Zembakia da? </h1>
+
+        <form class="n1" action="">                  
+            <input type="button" value="Txikiagoa da" onclick="kalkulatu('txikiagoa')"/>
+            <input type="button" value="Asmatu duzu" onclick="kalkulatu('asmatu')"/>
+            <input type="button" value="Handiagoa da" onclick="kalkulatu('haundiagoa')"/></br></br>
+            <input type="button" value="Berradierazi" onclick="berradierazi()"/>
+        </form>   
+        <h1 id="saiakerak">Saiakerak: 0</h1> 
+    <div>
+</body>
+</html>
