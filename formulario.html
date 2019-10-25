@@ -1,11 +1,80 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
-<body>
 
+	<head>
+		<title>11. Ariketa</title>
+		<link rel="stylesheet" type="text/css" href="Formularioa.css">
+	</head>
 
+	<body>
+		<h1 align="center">Formularioa</h1>
+		<form>
+		<fieldset>
+		<legend>Bezeroaren datu pertsonalak:</legend>
+			<p>
+			Izena: <input type="text" name="Izena" placeholder="Zure Izena...">
+			1. Abizena: <input type="text" name="Abizena1" placeholder="Zure 1.Abizena...">
+			2. Abizena: <input type="text" name="Abizena2" placeholder="Zure 2.Abizena...">
+			</p>
+			<p>
+			Jaiotze-data:
+			<br>
+			<input type="date" name="JaioData">
 
-</body>
+			</p>
+			<p>
+			Sexo: <input type="radio" name="Sexua" value="Gizona" checked>Gizona <input type="radio" name="Sexua" value="Emakumea">Emakumea
+			</p>
+			<p>
+			Korreoa: <input type="text" name="Helbidea" placeholder="adibidea@adibidea.com"> Pasahitza: <input type="password" name="Pasahitza" placeholder="Zure pasahitza...">
+			</p>
+			<p>
+			Herria: <input type="text" name="Herria" placeholder="Zure herria..."> Probintzia:
+			<select name="Probintzia"> <option>Gipuzkoa</option><option>Araba</option><option>Bizkaia</option> </select>
+			</p>
+		</fieldset>
+
+		<fieldset>
+		<legend>Bezeroen gustoak:</legend>
+
+			<fieldset style="width:300">
+				<legend>Aukeratu praktikatzen dituzun kirolak:</legend>
+				<input type="checkbox" name="Futbola">Futbola
+				<br>
+				<input type="checkbox" name="Saskibaloia">Saskibaloia
+				<br>
+				<input type="checkbox" name="Tenisa">Tenisa
+				<br>
+				<input type="checkbox" name="Bizikleta">Bizikleta
+				<br>
+			</fieldset>
+
+			<fieldset style="width:300">
+				<legend>Markatu gustoko duzun janaria:</legend>
+				<input type="checkbox" name="Fruta">Fruta
+				<br>
+				<input type="checkbox" name="Txokolatea">Txokolatea
+				<br>
+				<input type="checkbox" name="Entsalada">Entsalada
+				<br>
+				<input type="checkbox" name="Pasta">Pasta
+				<br>
+			</fieldset>
+
+		</fieldset>
+
+		<fieldset>
+			<legend>Iradokizunak</legend>
+			<textarea name"Iradokizunak" placeholder="Idatzi hemen zure iradokizunak..." rows="8" cols="60"></textarea>
+		</fieldset>
+
+		<fieldset align="center">
+		<legend align="center">Botoiak</legend>
+		<input type="submit" value="Bidali">
+		<input type="reset" value="Ezabatu">
+		</fieldset>
+
+		</form>
+
+	</body>
+
 </html>
