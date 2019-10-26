@@ -3,6 +3,25 @@
 	<head>
 		<title>11. Ariketa</title>
 		<link rel="stylesheet" type="text/css" href="Formularioa.css">
+		<script type="text/javascript">
+			function Taula() {
+			//Taulan izena jartzen du
+			var Izena = (document.getElementById("Izena").value);
+			document.getElementById("e_Izena").value = Izena;
+			//Taulan Abizena1 eta Abizena2 jartzen du
+			var Abizena1 = (document.getElementById("Abizena1").value);
+			document.getElementById("e_Abizena1").value = Abizena1;
+			//Taulan Abizena2 jartzen du
+			var Abizena2 = (document.getElementById("Abizena2").value);
+			document.getElementById("e_Abizena2").value = Abizena2;
+	//		//Taulan Jaiotze data jartzen du
+	///		var Jaiotze data = (document.getElementById("Izena").value);
+	///		document.getElementById("e_Izena").value=Izena;
+		//Taulan Abizena2 jartzen du
+		var Abizena2 = (document.getElementById("Abizena2").value);
+		document.getElementById("e_Abizena2").value = Abizena2;
+}
+		</script>
 	</head>
 
 	<body>
@@ -11,7 +30,7 @@
 		<fieldset>
 		<legend>Bezeroaren datu pertsonalak:</legend>
 			<p>
-			Izena: <input type="text" name="Izena" placeholder="Zure Izena...">
+			Izena: <input type="text" name="Izena" id="Izena" placeholder="Zure Izena...">
 			1. Abizena: <input type="text" name="Abizena1" placeholder="Zure 1.Abizena...">
 			2. Abizena: <input type="text" name="Abizena2" placeholder="Zure 2.Abizena...">
 			</p>
@@ -42,7 +61,7 @@
 
 		<fieldset align="center">
 		<legend align="center">Botoiak</legend>
-		<input type="submit" value="Bidali">
+		<input type="button" value="Bidali" onclick="Taula()">
 		<input type="reset" value="Ezabatu">
 		</fieldset>
 
@@ -59,12 +78,12 @@
 				<td>NAN</td>
 			</tr>
 			<td><input type="text" name="e_Izena" id="e_Izena"><input type="text" name="e_Abizena1" id="e_Abizena1"><input type="text" name="e_Abizena2" id="e_Abizena2"></td>
-			<td><input type="text" name="emaitza" id="emaitza"></td>
-			<td><input type="text" name="emaitza" id="emaitza"></td>
-			<td><input type="text" name="emaitza" id="emaitza"></td>
-			<td><input type="text" name="emaitza" id="emaitza"></td>
-			<td><input type="text" name="emaitza" id="emaitza"></td>
-			<td><input type="text" name="emaitza" id="emaitza"></td>
+			<td><input type="text" name="e_Data" id="e_Data"></td>
+			<td><input type="text" name="e_Sexo" id="e_Sexo"></td>
+			<td><input type="text" name="e_Probintzia" id="e_Probintzia"></td>
+			<td><input type="text" name="e_Korreoa" id="e_Korreoa"></td>
+			<td><input type="text" name="e_Telefonoa" id="e_Telefonoa"></td>
+			<td><input type="text" name="e_NAN" id="e_NAN"></td>
 		</table>
 	</body>
 
