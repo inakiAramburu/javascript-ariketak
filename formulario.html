@@ -5,9 +5,12 @@
 		<link rel="stylesheet" type="text/css" href="Formularioa.css">
 		<script type="text/javascript">
 			function Taula() {
+				var Data = new Date();
+				Urtea = Data.getFullYear();
 			//Taulan izena jartzen du
 			var Izena = (document.getElementById("Izena").value);
 			document.getElementById("e_Izena").value = Izena;
+
 			//Taulan Abizena1 eta Abizena2 jartzen du
 			var Abizena1 = (document.getElementById("Abizena1").value);
 			document.getElementById("e_Abizena1").value = Abizena1;
@@ -15,24 +18,25 @@
 			var Abizena2 = (document.getElementById("Abizena2").value);
 			document.getElementById("e_Abizena2").value = Abizena2;
 	//		//Taulan Jaiotze data jartzen du
-	///		var Jaiotze data = (document.getElementById("Izena").value);
-	///		document.getElementById("e_Izena").value=Izena;
-
+			var Jaiotze_data = parseInt(document.getElementById("jData").value);
+			var Adina =	Urtea - Jaiotze_data
+			document.getElementById("e_Data").value = Adina;
+		//	if (Adina<=18) alert ("EZ DITUZU 18 URTE!");
+ 		//	else if (isNaN(Adina)) alert ("Ez duzu data bete");
 			//Taulan Sexua jartzen du
-			var sexo= (document.getElementById("Sexo").value);
+/*			var sexo= (document.getElementById("Sexo").value);
 			document.getElementById("e_Sexo").value = sexo;
-
+*/
 			//Taulan Probintzia jartzen du
 			var Probintzia = (document.getElementById("Probintzia").value);
 			document.getElementById("e_Probintzia").value = Probintzia;
 
-//			//Taulan Korreo jartzen du
+			//Taulan Korreo jartzen du
 			var Korreoa = (document.getElementById("Korreoa").value);
 			document.getElementById("e_Korreoa").value = Korreoa;
-
 //			//Taulan Telefonoa jartzen du
 			var Telefonoa = (document.getElementById("Telefonoa").value);
-			document.getElementById("e_Telefonoa").value = Probintzia;
+			document.getElementById("e_Telefonoa").value =Telefonoa ;
 
 	//		//Taulan NAN jartzen du
 			var eNAN = (document.getElementById("NAN").value);
@@ -54,18 +58,22 @@
 			<p>
 			Jaiotze-data:
 			<br>
-			<input type="date" name="JaioData">
+			<input type="date" id="jData" name="JaioData">
 
 			</p>
 			<p>
-			Sexo: <input type="radio" name="Sexua" value="Gizona" checked>Gizona <input type="radio" name="Sexua" value="Emakumea">Emakumea <input type="radio" name="Sexua" value="Beste_bat">Beste bat
+			Sexo:
+							<input type="radio" name="Sexua" value="Gizona">Gizona
+							<input type="radio" name="Sexua" value="Emakumea">Emakumea
+						  <input type="radio" name="Sexua" value="Dinosaurio" checked>Dinosaurio
+							<input type="radio" name="Sexua" value="Beste_bat">Beste bat
 			</p>
 			<p>
 			Korreoa: <input type="text" name="Korreoa" id="Korreoa" placeholder="adibidea@adibidea.com"> Pasahitza: <input type="password" name="Pasahitza" placeholder="Zure pasahitza...">
 			</p>
 			<p>
 			Herria: <input type="text" name="Herria" placeholder="Zure herria...">
-			Probintzia: <select name="Probintzia"> <option>Gipuzkoa</option><option>Araba</option><option>Bizkaia</option> </select>
+			Probintzia: <select id="Probintzia" name="Probintzia"> <option>Gipuzkoa</option><option>Araba</option><option>Bizkaia</option> </select>
 			</p>
 			<p>
 			Telefonoa: <input type="text" name="Telefonoa" id="Telefonoa" placeholder="Telefonoa...">
@@ -86,7 +94,7 @@
 
 		<table>
 			<tr>
-				<td>izena abizenak</td>
+				<td>Izen abizenak</td>
 				<td>Urteak</td>
 				<td>Sexo</td>
 				<td>Probintzia</td>
