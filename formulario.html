@@ -17,9 +17,26 @@
 	//		//Taulan Jaiotze data jartzen du
 	///		var Jaiotze data = (document.getElementById("Izena").value);
 	///		document.getElementById("e_Izena").value=Izena;
-		//Taulan Abizena2 jartzen du
-		var Abizena2 = (document.getElementById("Abizena2").value);
-		document.getElementById("e_Abizena2").value = Abizena2;
+
+			//Taulan Sexua jartzen du
+			var sexo= (document.getElementById("Sexo").value);
+			document.getElementById("e_Sexo").value = sexo;
+
+			//Taulan Probintzia jartzen du
+			var Probintzia = (document.getElementById("Probintzia").value);
+			document.getElementById("e_Probintzia").value = Probintzia;
+
+//			//Taulan Korreo jartzen du
+			var Korreoa = (document.getElementById("Korreoa").value);
+			document.getElementById("e_Korreoa").value = Korreoa;
+
+//			//Taulan Telefonoa jartzen du
+			var Telefonoa = (document.getElementById("Telefonoa").value);
+			document.getElementById("e_Telefonoa").value = Probintzia;
+
+	//		//Taulan NAN jartzen du
+			var eNAN = (document.getElementById("NAN").value);
+			document.getElementById("e_NAN").value =eNAN ;
 }
 		</script>
 	</head>
@@ -31,8 +48,8 @@
 		<legend>Bezeroaren datu pertsonalak:</legend>
 			<p>
 			Izena: <input type="text" name="Izena" id="Izena" placeholder="Zure Izena...">
-			1. Abizena: <input type="text" name="Abizena1" placeholder="Zure 1.Abizena...">
-			2. Abizena: <input type="text" name="Abizena2" placeholder="Zure 2.Abizena...">
+			1. Abizena: <input type="text" name="Abizena1" id="Abizena1" placeholder="Zure 1.Abizena...">
+			2. Abizena: <input type="text" name="Abizena2" id="Abizena2" placeholder="Zure 2.Abizena...">
 			</p>
 			<p>
 			Jaiotze-data:
@@ -44,17 +61,17 @@
 			Sexo: <input type="radio" name="Sexua" value="Gizona" checked>Gizona <input type="radio" name="Sexua" value="Emakumea">Emakumea <input type="radio" name="Sexua" value="Beste_bat">Beste bat
 			</p>
 			<p>
-			Korreoa: <input type="text" name="Helbidea" placeholder="adibidea@adibidea.com"> Pasahitza: <input type="password" name="Pasahitza" placeholder="Zure pasahitza...">
+			Korreoa: <input type="text" name="Korreoa" id="Korreoa" placeholder="adibidea@adibidea.com"> Pasahitza: <input type="password" name="Pasahitza" placeholder="Zure pasahitza...">
 			</p>
 			<p>
 			Herria: <input type="text" name="Herria" placeholder="Zure herria...">
 			Probintzia: <select name="Probintzia"> <option>Gipuzkoa</option><option>Araba</option><option>Bizkaia</option> </select>
 			</p>
 			<p>
-			Telefonoa: <input type="text" name="Telefonoa" placeholder="Telefonoa...">
+			Telefonoa: <input type="text" name="Telefonoa" id="Telefonoa" placeholder="Telefonoa...">
 			</p>
 			<p>
-			NAN: <input type="text" name="NAN" placeholder="xxxxxxxxX">
+			NAN: <input type="text" name="NAN" id="NAN" placeholder="xxxxxxxxX">
 			</p>
 
 		</fieldset>
