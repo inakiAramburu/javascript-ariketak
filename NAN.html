@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NAN Letra</title>
+  <script type="text/javascript">
+	function Asmatu()
+	{
+   var ZnbkNAN = parseInt(document.getElementById("NAN").value);
+		var LetraNAN;
+		//var NAN_HONDARRA=ZnbkNAN % 23;
+		switch (ZnbkNAN % 23)
+		 {
+			case 0: LetraNAN = "T";		break;
+			case 1: LetraNAN = "R";		break;
+			case 2: LetraNAN = "W";		break;
+			case 3: LetraNAN = "A";		break;
+			case 4: LetraNAN = "G";		break;
+			case 5: LetraNAN = "M";		break;
+			case 6: LetraNAN = "Y";		break;
+			case 7: LetraNAN = "F";		break;
+			case 8: LetraNAN = "P";		break;
+			case 9: LetraNAN = "D";		break;
+			case 10: LetraNAN = "X";	break;
+			case 11: LetraNAN = "B";	break;
+			case 12: LetraNAN = "N";	break;
+			case 13: LetraNAN = "J";	break;
+			case 14: LetraNAN = "Z";	break;
+			case 15: LetraNAN = "S";	break;
+			case 16: LetraNAN = "Q";	break;
+			case 17: LetraNAN = "V";	break;
+			case 18: LetraNAN = "H";	break;
+			case 19: LetraNAN = "L";	break;
+			case 20: LetraNAN = "C";	break;
+			case 21: LetraNAN = "K";	break;
+			case 22: LetraNAN = "E";	break;
+			document.getElementById("e_NAN").value = LetraNAN;
+			break;
+			default: alert("Zenbakia gaizki sartu duzu");
+
+		}
+
+	}
+
+  </script>
+</head>
+<body>
+  <form>
+		<input type="text" name="NAN" id="NAN">
+		<input type="text" name="e_NAN" id="e_NAN" >
+		<input type="button" value="Asmatu" onclick="Asmatu()">
+	</form>
+</body>
+</html>
