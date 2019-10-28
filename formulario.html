@@ -17,16 +17,21 @@
 			//Taulan Abizena2 jartzen du
 			var Abizena2 = (document.getElementById("Abizena2").value);
 			document.getElementById("e_Abizena2").value = Abizena2;
-	//		//Taulan Jaiotze data jartzen du
+			//Taulan Jaiotze data jartzen du
 			var Jaiotze_data = parseInt(document.getElementById("jData").value);
 			var Adina =	Urtea - Jaiotze_data
 			document.getElementById("e_Data").value = Adina;
-		//	if (Adina<=18) alert ("EZ DITUZU 18 URTE!");
+		//	if (Adina < 18) alert ("EZ DITUZU 18 URTE!");
  		//	else if (isNaN(Adina)) alert ("Ez duzu data bete");
 			//Taulan Sexua jartzen du
-/*			var sexo= (document.getElementById("Sexo").value);
-			document.getElementById("e_Sexo").value = sexo;
-*/
+			var Sexua;
+			if (document.getElementById("S1").checked) Sexua = (document.getElementById("S1").value);
+			else if (document.getElementById("S2").checked) Sexua = (document.getElementById("S2").value);
+			else if (document.getElementById("S3").checked) Sexua = (document.getElementById("S3").value);
+			else if (document.getElementById("S4").checked) Sexua = (document.getElementById("S4").value);
+			else if (document.getElementById("S5").checked) Sexua = (document.getElementById("S5").value);
+			document.getElementById("e_Sexo").value = Sexua;
+
 			//Taulan Probintzia jartzen du
 			var Probintzia = (document.getElementById("Probintzia").value);
 			document.getElementById("e_Probintzia").value = Probintzia;
@@ -63,10 +68,11 @@
 			</p>
 			<p>
 			Sexo:
-							<input type="radio" name="Sexua" value="Gizona">Gizona
-							<input type="radio" name="Sexua" value="Emakumea">Emakumea
-						  <input type="radio" name="Sexua" value="Dinosaurio" checked>Dinosaurio
-							<input type="radio" name="Sexua" value="Beste_bat">Beste bat
+							<input type="radio" name="Sexua" id="S1" value="Gizona">Gizona
+							<input type="radio" name="Sexua" id="S2" value="Emakumea">Emakumea
+							<input type="radio" name="Sexua" id="S4" value="Beste_bat">Beste bat
+							<input type="radio" name="Sexua" id="S3" value="Dinosaurio" checked>Dinosaurio
+							<input type="radio" name="Sexua" id="S5" value="Helicoptero de guerra apache">Helicoptero de guerra apache
 			</p>
 			<p>
 			Korreoa: <input type="text" name="Korreoa" id="Korreoa" placeholder="adibidea@adibidea.com"> Pasahitza: <input type="password" name="Pasahitza" placeholder="Zure pasahitza...">
