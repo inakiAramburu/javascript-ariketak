@@ -54,19 +54,28 @@
 				}
 			//IzenAbizenak juntatu
 				var IzenAbizenak = Izena.concat(" ", Abizena1, " ", Abizena2)
-				if (length(Izena) < 0)
+				//Izena beteta dagoen ikusten du.
+				if (Izena.length == 0)
 				{
 					alert("Izena bete behar duzu");
 					Error++;
 				}
-				if (length(Abizena1) < 0)
+				//Abizena1 betea dagoen ikuzten du.
+				if (Abizena1.length == 0)
 				{
 					alert("1. Abizena bete behar duzu");
 					Error++;
 				}
-				if (length(Abizena2) < 0)
+				//Abizena2 betea dagoen ikuzten du.
+				if (Abizena2.length == 0)
 				{
 					alert("2. Abizena bete behar duzu");
+					Error++;
+				}
+				//Korreoa betea dagoen ikuzten du.
+				if (Korreoa.length == 0)
+				{
+					alert("Korreoa bete behar duzu");
 					Error++;
 				}
 ////////////////////Erroreak ez badaude taula erakutziko du.////////////////////////////////
