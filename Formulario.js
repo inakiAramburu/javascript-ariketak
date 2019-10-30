@@ -82,11 +82,11 @@ function Taula()
           alert("Telefonoa ez dago ondo");
           Error++;
         }
-        if (Pasahitza.length == 0)
+  /*      if (Pasahitza.length == 0)
         {
           alert("Pasahitza bete behar duzu");
           Error++;
-        }
+        }*/
         if (Herri.length == 0)
         {
           alert("Herria jarri behar duzu");
