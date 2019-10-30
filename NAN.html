@@ -7,7 +7,6 @@
 	{
    var ZnbkNAN = parseInt(document.getElementById("NAN").value);
 		var LetraNAN;
-		//var NAN_HONDARRA=ZnbkNAN % 23;
 		switch (ZnbkNAN % 23)
 		 {
 			case 0: LetraNAN = "T";		break;
@@ -33,12 +32,12 @@
 			case 20: LetraNAN = "C";	break;
 			case 21: LetraNAN = "K";	break;
 			case 22: LetraNAN = "E";	break;
-			document.getElementById("e_NAN").value = LetraNAN;
+
 			break;
 			default: alert("Zenbakia gaizki sartu duzu");
 
 		}
-
+		document.getElementById("e_NAN").value = LetraNAN;
 	}
 
   </script>
