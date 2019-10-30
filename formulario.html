@@ -3,12 +3,15 @@
 	<head>
 		<title>11. Ariketa</title>
 		<link rel="stylesheet" type="text/css" href="Formularioa.css">
-		<script type="text/javascript">
+		<script src="Formulario.js"></script>
+
+<!--		<script type="text/javascript">
 
 			function Taula() {
 				var Data = new Date();
 				var Error = 0;
 				Urtea = Data.getFullYear();
+//////////////////////////////////////baloreak artzen ditugu///////////////////////////////////////
 			//izena
 				var Izena = (document.getElementById("Izena").value);
 			//Abizena1
@@ -24,10 +27,14 @@
 				else if (document.getElementById("S3").checked) Sexua = (document.getElementById("S3").value);
 				else if (document.getElementById("S4").checked) Sexua = (document.getElementById("S4").value);
 				else if (document.getElementById("S5").checked) Sexua = (document.getElementById("S5").value);
+			//Herria
+	//		var Herri = (document.getElementById("Herria").value);
 			//Probintzia
 				var Probintzia = (document.getElementById("Probintzia").value);
 			//Korreoa
 				var Korreoa = (document.getElementById("Korreoa").value);
+			//Pasahitza
+				var Pasahitza = (document.getElementById("Pasahitza").value);
 			//Telefonoa
 				var Telefonoa = (document.getElementById("Telefonoa").value);
 			//NAN
@@ -35,12 +42,14 @@
 
 				NANZnbk = eNAN.slice(0, 8);
 				NANLetra = eNAN.slice(8, 9);
+
+//////////////////////////datuak sartu diren komprobatzen da/////////////////////
 				if (NANLetra != Asmatu(NANZnbk))
 				{
 					alert("NAN-aren letra gaizki dago");
 					Error++;
 				}
-
+/*
 				var Adina =	Urtea - Jaiotze_data
 				if (Adina < 18)
 				{
@@ -52,32 +61,48 @@
 					alert ("Ez duzu data bete");
 					Error++;
 				}
-			//IzenAbizenak juntatu
-				var IzenAbizenak = Izena.concat(" ", Abizena1, " ", Abizena2)
+				//IzenAbizenak juntatu
+					var IzenAbizenak = Izena.concat(" ", Abizena1, " ", Abizena2)
 				//Izena beteta dagoen ikusten du.
-				if (Izena.length == 0)
-				{
-					alert("Izena bete behar duzu");
-					Error++;
-				}
+					if (Izena.length == 0)
+					{
+						alert("Izena bete behar duzu");
+						Error++;
+					}
 				//Abizena1 betea dagoen ikuzten du.
-				if (Abizena1.length == 0)
-				{
-					alert("1. Abizena bete behar duzu");
-					Error++;
-				}
+					if (Abizena1.length == 0)
+					{
+						alert("1. Abizena bete behar duzu");
+						Error++;
+					}
 				//Abizena2 betea dagoen ikuzten du.
-				if (Abizena2.length == 0)
-				{
-					alert("2. Abizena bete behar duzu");
-					Error++;
-				}
+					if (Abizena2.length == 0)
+					{
+						alert("2. Abizena bete behar duzu");
+						Error++;
+					}
 				//Korreoa betea dagoen ikuzten du.
-				if (Korreoa.length == 0)
-				{
-					alert("Korreoa bete behar duzu");
-					Error++;
-				}
+					if (Korreoa.length == 0)
+					{
+						alert("Korreoa bete behar duzu");
+						Error++;
+					}
+				//telefonoa zartuduzun ikuzten du.
+					if (Telefonoa.length != 9)
+					{
+						alert("Telefonoa ez dago ondo");
+						Error++;
+					}*/
+					if (kontraseña.length == 0)
+					{
+						alert("Herria jarri behar duzu...");
+						Error++;
+					}
+				//	if (Herri.length == 0)
+	     //   {
+	      //    alert("Herria jarri behar duzu");
+	          Error++;
+	        }
 ////////////////////Erroreak ez badaude taula erakutziko du.////////////////////////////////
 				if (!Error)
 				{
@@ -85,7 +110,6 @@
 						document.getElementById("e_Izena").innerHTML = IzenAbizenak;
 					//Taulan adina erakuzten du
 						document.getElementById("e_Data").innerHTML = Adina;
-
 					//taulan sexua jartzen du.
 						document.getElementById("e_Sexo").innerHTML = Sexua;
 					//taulan probintzia jartzen du.
@@ -139,7 +163,7 @@ function Asmatu(NANZnbk)
 	}
 return LetraNAN;
 }
-		</script>
+</script>-->
 	</head>
 
 	<body>
@@ -168,10 +192,12 @@ return LetraNAN;
 										<input type="radio" name="Sexua" id="S5" value="Helicoptero de guerra apache">Helicoptero de guerra apache
 						</p>
 						<p>
-						Korreoa: <input type="text" name="Korreoa" id="Korreoa" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="adibidea@adibidea.com"> Pasahitza: <input type="password" name="Pasahitza" placeholder="Zure pasahitza...">
+						Korreoa: <input type="text" name="Korreoa" id="Korreoa" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="adibidea@adibidea.com">
+
+					 Pasahitza: <input type="password" id="Pasahitza" name="Pasahitza" placeholder="Zure pasahitza...">
 						</p>
 						<p>
-						Herria: <input type="text" name="Herria" placeholder="Zure herria...">
+						Herria: <input type="text" id="Herria" name="Herria" placeholder="Zure herria...">
 						Probintzia: <select id="Probintzia" name="Probintzia"> <option>Gipuzkoa</option><option>Araba</option><option>Bizkaia</option> </select>
 						</p>
 						<p>
@@ -180,7 +206,6 @@ return LetraNAN;
 						<p>
 						NAN: <input type="text" name="NAN" id="NAN" pattern="[0-9]{8}[A-Z]{1}" placeholder="xxxxxxxxX">
 						</p>
-			//sinc
 					</fieldset>
 
 					<fieldset align="center">
@@ -191,7 +216,7 @@ return LetraNAN;
 			</form>
 		</div>
 <div id="Taula">
-		<table >
+		<table class="table">
 			<tr>
 				<td>Izen abizenak</td>
 				<td>Urteak</td>
