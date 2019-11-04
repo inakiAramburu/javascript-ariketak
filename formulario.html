@@ -25,16 +25,16 @@
 						Jaiotze-data:
 						<br>
 						<input type="date" id="jData" name="JaioData">
-
 						</p>
+						<br>
 						<p>
 						Sexo:
 										<input type="radio" name="Sexua" id="S1" value="Gizona">Gizona
 										<input type="radio" name="Sexua" id="S2" value="Emakumea">Emakumea
 										<input type="radio" name="Sexua" id="S4" value="Beste_bat">Beste bat
-										<input type="radio" name="Sexua" id="S3" value="Dinosaurio" checked>Dinosaurio
-										<input type="radio" name="Sexua" id="S5" value="Helicoptero de guerra apache">Helicoptero de guerra apache
-						</p>
+										<input type="radio" name="Sexua" id="S3" class="form-check-label" for="inlineRadio3" value="Dinosaurio" checked>Dinosaurio
+										<input type="radio" name="Sexua" id="S5" class="form-check-label" for="inlineRadio3" value="Helicoptero de guerra apache">Helicoptero de guerra apache
+							</p>
 						<p>
 						Korreoa: <input type="text" name="Korreoa" id="Korreoa" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="adibidea@adibidea.com">
 
@@ -42,7 +42,12 @@
 						</p>
 						<p>
 						Herria: <input type="text" id="Herria" name="Herria" placeholder="Zure herria...">
-						Probintzia: <select id="Probintzia" name="Probintzia"> <option>Gipuzkoa</option><option>Araba</option><option>Bizkaia</option> </select>
+						Probintzia:
+						<select  id="Probintzia" name="Probintzia">
+							 <option>Gipuzkoa</option>
+							 <option>Araba</option>
+							 <option>Bizkaia</option>
+						 </select>
 						</p>
 						<p>
 						Telefonoa: <input type="text" name="Telefonoa"pattern="[0-9]{9}" id="Telefonoa" placeholder="Telefonoa...">
@@ -54,8 +59,8 @@
 
 					<fieldset align="center">
 					<legend align="center">Botoiak</legend>
-					<input type="button" value="Bidali" onclick="Taula()">
-					<input type="reset" value="Ezabatu">
+					<input type="button" value="Bidali" onclick="Taula()"class="btn btn-primary mb-2">
+					<input type="reset" value="Ezabatu"class="btn btn-primary mb-2">
 				</fieldset>
 			</form>
 		</div>
