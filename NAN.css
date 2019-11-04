@@ -1,0 +1,28 @@
+body {
+  background-color: blue;
+  text-align: center;
+}
+
+.wrapper {
+  max-height: 100%;
+  text-align: center;
+}
+
+form {
+  text-align: center;
+}
+
+#NAN {
+  text-align: center;
+  font-size: 2em;
+  padding: 0.6em;
+  width: 16%;
+}
+
+#botoia {
+  font-size: 1.7em;
+  padding: 0.7em;
+  border-radius: 0.2em;
+  border-style: none;
+  background-color: #4CAF50;
+}

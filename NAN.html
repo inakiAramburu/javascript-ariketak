@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>NAN Letra</title>
+	<link rel="stylesheet" type="text/css" href="NAN.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script type="text/javascript">
 	function Asmatu()
 	{
@@ -37,16 +39,22 @@
 			default: alert("Zenbakia gaizki sartu duzu");
 
 		}
-		document.getElementById("e_NAN").value = LetraNAN;
+		document.getElementById("e_NAN").innerHTML = LetraNAN;
 	}
 
   </script>
 </head>
 <body>
-  <form>
-		<input type="text" name="NAN" id="NAN">
-		<input type="text" name="e_NAN" id="e_NAN" >
-		<input type="button" value="Asmatu" onclick="Asmatu()">
-	</form>
+	<div class="wrapper">
+		<h1>NAN-aren Letra Asmatzailea</h1>
+	  <form>
+			<input type="text" name="NAN" id="NAN">
+			<br>
+			<br>
+			<h2 id="e_NAN"></h2>
+			<br>
+			<input type="button" id="botoia" value="Asmatu" onclick="Asmatu()">
+		</form>
+	</div>
 </body>
 </html>
