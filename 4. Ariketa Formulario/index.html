@@ -8,16 +8,18 @@
 		<script src="Formulario.js"></script>
 
 
+
 	</head>
 
 	<body>
+
 		<div id="Formularioa" >
 			<h1 align="center">Formularioa</h1>
 			<form>
 				<fieldset>
 					<legend>Bezeroaren datu pertsonalak:</legend>
 						<p>
-						Izena: <input type="text" name="Izena" id="Izena" placeholder="Zure Izena...">
+						Izena: <input type="text" name="Izena1" id="Izenap" placeholder="Zure Izena...">
 						1. Abizena: <input type="text" name="Abizena1" id="Abizena1" placeholder="Zure 1.Abizena...">
 						2. Abizena: <input type="text" name="Abizena2" id="Abizena2" placeholder="Zure 2.Abizena...">
 						</p>
@@ -83,7 +85,25 @@
 			<td id="e_Telefonoa"></td>
 			<td id="e_NAN"></td>
 		</table>
+
+		<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
 	</div>
+
+			<form action="ff.php" method="post" >
+				<input type="text" style="display: none;" id="MIzena"name="Izena">
+				<input type="text" style="display: none;" id="MjData" name="JaioData">
+				<input type="text" style="display: none;" id="MSexua"  name="Sexua">
+				<input type="text" style="display: none;" id="MKorreoa" name="korreo">
+			 	<input type="text" style="display: none;" id="MProbintzia" name="probintzia">
+			 	<input type="text" style="display: none;" id="MTelefonoa" name="Telefonoa">
+				<input type="text" style="display: none;" id="MNAN" name="NAN" >
+
+				<input style="display: none;" value="Bidali" id="bidali" type="submit" class="btn btn-primary">
+			</form>
+
+
+
 	</body>
 
 </html>

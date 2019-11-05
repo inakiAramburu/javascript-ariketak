@@ -4,7 +4,7 @@ function Taula()
   var Error = 0;
   Urtea = Data.getFullYear();
     //izena
-      var Izena = (document.getElementById("Izena").value);
+      var Izena = (document.getElementById("Izenap").value);
     //Abizena1
       var Abizena1 = (document.getElementById("Abizena1").value);
     //Abizena2
@@ -114,9 +114,22 @@ function Taula()
       document.getElementById("Formularioa").style.display = "none";
     //Taula erakuzten du.
       document.getElementById("Taula").style.display = "block";
-}
-}
+      //php botoia erakutsi
+      document.getElementById("bidali").style.display = "block";
 
+
+/////////////////////////////mandar datos/////////////////////////////////
+
+      document.getElementById("MIzena").value = IzenAbizenak;
+      document.getElementById("MjData").value = Adina;
+      document.getElementById("MSexua").value = Sexua;
+      document.getElementById("MKorreoa").value = Korreoa;
+      document.getElementById("MProbintzia").value = Probintzia;
+      document.getElementById("MTelefonoa").value = Telefonoa;
+      document.getElementById("MNAN").value = eNAN;
+//////////////////////////////////////////////////////////////
+  }
+}
 function Asmatu(NANZnbk)
 {
   var LetraNAN;
