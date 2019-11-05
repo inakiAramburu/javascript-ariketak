@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <h1 id="t1">1.Titulua</h1>
+  <h2 id="t2">2.azpititulua</h2>
+</head>
+
+<body>
+  <p id="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam et totam ex, quia adipisci in cum eveniet fuga
+  iste quibusdam architecto, cupiditate repudiandae iure esse quo nobis consequatur distinctio! Illo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus minima corrupti labore, aliquid est, pariatur natus. Ipsa a eos, illum totam, quasi suscipit, beatae nulla ducimus sed fuga rem iusto! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quidem tenetur unde et, fugit mollitia repellat necessitatibus recusandae veritatis cumque libero est reprehenderit blanditiis. Iusto nam a animi cum blanditiis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam illum ex animi nulla quis repellat magni quas, nobis, adipisci ipsam qui atque necessitatibus veritatis cum. Itaque expedita laboriosam quam fugit.</p>
+<script>
+function beltzarana() {
+  var str = document.getElementById("texto").innerHTML;
+  var result = str.bold();
+  document.getElementById("texto").innerHTML = result;
+}
+
+function generarColor(){
+  var letras = ["a","b","c","d","e","f","0","1","2","3","4","5","6","7","8","9"];
+  var numero = (Math.random()*15).toFixed(0);
+  return letras[numero];
+}
+  
+function colorHEX(){
+  var color = "";
+  for(var i=0;i<6;i++){
+    color = color + generarColor() ;
+  }
+  document.getElementById('texto').style.color = "#" + color;
+}
+
+function cursive() {
+  var str = document.getElementById("texto").innerHTML;
+  var result = str.italics();
+  document.getElementById("texto").innerHTML = result;
+}
+
+var fontSize = 1;
+
+function handiagoa() {
+    fontSize += 0.1;
+    document.getElementById("texto").style.fontSize = fontSize + "em";
+}
+
+function txikiagoa() {
+    fontSize -= 0.1;
+    document.getElementById("texto").style.fontSize = fontSize + "em";
+}
+
+function tituluH() {
+  var str = document.getElementById("t1").innerHTML;
+  var result = str.big();
+  document.getElementById("t1").innerHTML = result;
+}
+
+
+function tituluT() {
+  var str = document.getElementById("t1").innerHTML;
+  var result = str.small();
+  document.getElementById("t1").innerHTML = result;
+}
+
+function tituluH2() {
+  var str = document.getElementById("t2").innerHTML;
+  var result = str.big();
+  document.getElementById("t2").innerHTML = result;
+}
+
+
+function tituluT2() {
+  var str = document.getElementById("t2").innerHTML;
+  var result = str.small();
+  document.getElementById("t2").innerHTML = result;
+}
+
+
+</script> 
+  <button onclick="beltzarana()">Beltzarana</button>
+  <button onclick="colorHEX()">Kolore aldaketa random</button>
+  <button onclick="cursive()">Etzana</button>
+  <button onclick="handiagoa()">Tamainu handiagoa</button>
+  <button onclick="txikiagoa()">Tamainu txikiagoa</button>
+  <button onclick="tituluH()">Titulua handiagoa</button>
+  <button onclick="tituluT()">Titulua txikiagoa</button>
+  <button onclick="tituluH2()">Azpititulua hangiagoa</button>
+  <button onclick="tituluT2()">Azpititulua txikiagoa</button>
+</body>
+</html>
